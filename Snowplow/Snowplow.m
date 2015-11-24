@@ -37,25 +37,25 @@ NSString * const kSPVersion               = @"osx-0.6.0";
 // --- Emitter
 
 NSString * const kSPContentTypeHeader     = @"application/json; charset=utf-8";
-NSString * const kSPAcceptContentHeader   = @"text/html, application/x-www-form-urlencoded, text/plain, image/gif";
+NSString * const kSPAcceptContentHeader   = @"text/html, application/x-www-form-urlencoded, text/plain, image/gif, application/json, text/json";
 NSInteger  const kSPDefaultBufferTimeout  = 60;
-NSString * const kSPEndpointPost          = @"/com.snowplowanalytics.snowplow/tp2";
-NSString * const kSPEndpointGet           = @"/i";
+NSString * const kSPEndpointPost          = @"/api/collect";
+NSString * const kSPEndpointGet           = @"/api/collect";
 
 // --- Schema Paths
 
-NSString * const kSPIglu                  = @"iglu";
-NSString * const kSPSnowplowVendor        = @"com.snowplowanalytics.snowplow";
-NSString * const kSPSchemaTag             = @"jsonschema";
-NSString * const kSPPayloadDataSchema     = @"iglu:com.snowplowanalytics.snowplow/payload_data/jsonschema/1-0-3";
-NSString * const kSPUserTimingsSchema     = @"iglu:com.snowplowanalytics.snowplow/timing/jsonschema/1-0-0";
-NSString * const kSPScreenViewSchema      = @"iglu:com.snowplowanalytics.snowplow/screen_view/jsonschema/1-0-0";
-NSString * const kSPUnstructSchema        = @"iglu:com.snowplowanalytics.snowplow/unstruct_event/jsonschema/1-0-0";
-NSString * const kSPContextSchema         = @"iglu:com.snowplowanalytics.snowplow/contexts/jsonschema/1-0-1";
-NSString * const kSPMobileContextSchema   = @"iglu:com.snowplowanalytics.snowplow/mobile_context/jsonschema/1-0-1";
-NSString * const kSPDesktopContextSchema  = @"iglu:com.snowplowanalytics.snowplow/desktop_context/jsonschema/1-0-0";
-NSString * const kSPSessionContextSchema  = @"iglu:com.snowplowanalytics.snowplow/client_session/jsonschema/1-0-1";
-NSString * const kSPGeoContextSchema      = @"iglu:com.snowplowanalytics.snowplow/geolocation_context/jsonschema/1-1-0";
+NSString * const kSPIglu                  = @"dd";
+NSString * const kSPSnowplowVendor        = @"com.xhs";
+NSString * const kSPSchemaTag             = @"json";
+NSString * const kSPPayloadDataSchema     = @"dd:com.xhs/payload_data/json/1-0-3";
+NSString * const kSPUserTimingsSchema     = @"dd:com.xhs/timing/json/1-0-0";
+NSString * const kSPScreenViewSchema      = @"dd:com.xhs/screen_view/json/1-0-0";
+NSString * const kSPUnstructSchema        = @"dd:com.xhs/unstruct_event/json/1-0-0";
+NSString * const kSPContextSchema         = @"dd:com.xhs/contexts/json/1-0-1";
+NSString * const kSPMobileContextSchema   = @"dd:com.xhs/mobile_context/json/1-0-1";
+NSString * const kSPDesktopContextSchema  = @"dd:com.xhs/desktop_context/json/1-0-0";
+NSString * const kSPSessionContextSchema  = @"dd:com.xhs/client_session/json/1-0-1";
+NSString * const kSPGeoContextSchema      = @"dd:com.xhs/geolocation_context/json/1-1-0";
 
 // --- Event Keys
 
