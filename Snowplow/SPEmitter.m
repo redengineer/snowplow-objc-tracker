@@ -92,7 +92,8 @@ const NSInteger POST_STM_BYTES = 22;
     // https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html
 #if SNOWPLOW_TARGET_IOS
     if (SNOWPLOW_iOS_9_OR_LATER) {
-        _protocol = SPHttps;
+        //iOS9 也使用http
+//        _protocol = SPHttps;
     }
 #elif SNOWPLOW_TARGET_TV
     _protocol = SPHttps;
