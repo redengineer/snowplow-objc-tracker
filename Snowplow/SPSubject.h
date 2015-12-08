@@ -182,4 +182,7 @@
  */
 - (void) setGeoTimestamp:(NSInteger)timestamp;
 
+
+- (void) setExp:(NSString *)exp;
+
 @end

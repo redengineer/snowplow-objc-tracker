@@ -47,7 +47,7 @@ NSString * const kSPEndpointGet           = @"/api/collect";
 NSString * const kSPIglu                  = @"dd";
 NSString * const kSPSnowplowVendor        = @"com.xhs";
 NSString * const kSPSchemaTag             = @"json";
-NSString * const kSPPayloadDataSchema     = @"dd:com.xhs/payload_data/json/1-0-3";
+NSString * const kSPPayloadDataSchema     = @"dd:com.xhs/payload_data/json/1-0-4";
 NSString * const kSPUserTimingsSchema     = @"dd:com.xhs/timing/json/1-0-0";
 NSString * const kSPScreenViewSchema      = @"dd:com.xhs/screen_view/json/1-0-0";
 NSString * const kSPUnstructSchema        = @"dd:com.xhs/unstruct_event/json/1-0-0";
@@ -81,6 +81,9 @@ NSString * const kSPContext               = @"co";
 NSString * const kSPContextEncoded        = @"cx";
 NSString * const kSPUnstructured          = @"ue_pr";
 NSString * const kSPUnstructuredEncoded   = @"ue_px";
+
+//XHS
+NSString * const kSPExp                   = @"exp";
 
 // --- Subject
 

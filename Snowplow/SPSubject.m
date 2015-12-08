@@ -179,4 +179,8 @@
     [_geoLocationDict setObject:[NSNumber numberWithInt:(int)timestamp] forKey:kSPGeoTimestamp];
 }
 
+- (void) setExp:(NSString *)exp {
+    [_standardDict addValueToPayload:exp forKey:kSPExp];
+}
+
 @end

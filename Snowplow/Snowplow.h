@@ -99,6 +99,8 @@ extern NSString * const kSPContextEncoded;
 extern NSString * const kSPUnstructured;
 extern NSString * const kSPUnstructuredEncoded;
 
+extern NSString * const kSPExp;
+
 // --- Subject
 
 extern NSString * const kSPPlatform;
