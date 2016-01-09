@@ -46,7 +46,7 @@ enum SPProtocol {
 - (void) setEmitThreadPoolSize:(NSInteger)emitThreadPoolSize;
 - (void) setByteLimitGet:(NSInteger)byteLimitGet;
 - (void) setByteLimitPost:(NSInteger)byteLimitPost;
-
+- (void) setSenddataInternal:(NSInteger)senddataInternal;
 @end
 
 @interface SPEmitter : NSObject <SPEmitterBuilder>
@@ -58,6 +58,7 @@ enum SPProtocol {
 @property (readonly, nonatomic)         NSInteger             emitThreadPoolSize;
 @property (readonly, nonatomic)         NSInteger             byteLimitGet;
 @property (readonly, nonatomic)         NSInteger             byteLimitPost;
+@property (readonly, nonatomic)         NSInteger             senddataInternal;
 @property (readonly, nonatomic, weak)   id<SPRequestCallback> callback;
 
 /**

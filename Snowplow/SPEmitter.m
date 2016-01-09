@@ -72,6 +72,7 @@ const NSInteger POST_STM_BYTES = 22;
         _emitThreadPoolSize = 15;
         _byteLimitGet = 40000;
         _byteLimitPost = 40000;
+        _senddataInternal = 0;
         _isSending = NO;
         _db = [[SPEventStore alloc] init];
         _dataOperationQueue = [[NSOperationQueue alloc] init];
@@ -158,6 +159,11 @@ const NSInteger POST_STM_BYTES = 22;
 
 - (void) setByteLimitPost:(NSInteger)byteLimitPost {
     _byteLimitPost = byteLimitPost;
+}
+
+- (void) setSenddataInternal:(NSInteger)senddataInternal
+{
+    _senddataInternal = senddataInternal;
 }
 
 // Builder Finished
@@ -320,6 +326,9 @@ const NSInteger POST_STM_BYTES = 22;
         _isSending = NO;
         return;
     } else {
+        if (_senddataInternal > 0) {
+            [NSThread sleepForTimeInterval:_senddataInternal];
+        }
         [self sendEvents];
     }
 }
