@@ -1,6 +1,15 @@
-Version 0.6.0 (2015-11-04)
+Version 0.6.1 (2016-02-22)
 --------------------------
+Made podfile dependencies more restrictive (#266)
+Harmonized foreground and background timeouts with Android (#265)
+Fixed Cast from NS(U)Integer to long type causing crashes on 32-bit devices (#264)
+Fixed crash when logging emitter attempts, thanks @rockshassa! (#262)
+
+Version 0.6.0 (2016-01-18)
+--------------------------
+ClientSession needs to send null for the first previousSessionId (#257)
 Removed buffer limit in favour of only using bytelimit (#245)
+Only start a single timer, be sure to stop previous checker (#252)
 Updated Cocoapods version to 0.39.0 (#243)
 Updated pauseEventTracking so that the emitter timer is invalidated/stopped (#218)
 Changed floats, doubles and ints to NSNumbers (#96)
@@ -23,6 +32,7 @@ OpenIDFA calendar is deprecated for iOS 8, thanks @iamjason! (#230)
 SPUtilities getTimestamp should return an NSInteger not double (#229)
 Fixed classname collision: SPUtils vs WatchKit.framework, thanks @iamjason! (#228)
 Fixed tvOS could not create database queue for path (#251)
+Replaced legacy docset_url in podspec with documentation_url (#259)
 
 Version 0.5.2 (2015-09-30)
 --------------------------

@@ -63,11 +63,10 @@ NSString * const kSessionSavePath = @"session.dict";
         NSDictionary * maybeSessionDict = [self getSessionFromFile];
         if (maybeSessionDict == nil) {
             _userId = [SPUtilities getEventId];
-            _currentSessionId = @"";
+            _currentSessionId = nil;
         } else {
             _userId = [maybeSessionDict valueForKey:kSPSessionUserId];
             _currentSessionId = [maybeSessionDict valueForKey:kSPSessionId];
-            _previousSessionId = [maybeSessionDict valueForKey:kSPSessionPreviousId];
             _sessionIndex = [[maybeSessionDict valueForKey:kSPSessionIndex] intValue];
         }
         
@@ -95,6 +94,10 @@ NSString * const kSessionSavePath = @"session.dict";
 // --- Public
 
 - (void) startChecker {
+    if (_sessionTimer != nil) {
+        [self stopChecker];
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         _sessionTimer = [NSTimer scheduledTimerWithTimeInterval:_checkInterval
                                                          target:[[SPWeakTimerTarget alloc] initWithTarget:self andSelector:@selector(checkSession:)]
@@ -159,7 +162,9 @@ NSString * const kSessionSavePath = @"session.dict";
     BOOL result = NO;
     if ([paths count] > 0) {
         NSString * savePath = [[paths lastObject] stringByAppendingPathComponent:kSessionSavePath];
-        NSDictionary * sessionDict = _sessionDict;
+        NSMutableDictionary * sessionDict = [NSMutableDictionary dictionaryWithDictionary:_sessionDict];
+        [sessionDict removeObjectForKey:kSPSessionPreviousId];
+        [sessionDict removeObjectForKey:kSPSessionStorage];
         result = [sessionDict writeToFile:savePath atomically:YES];
     }
     return result;
@@ -210,7 +215,7 @@ NSString * const kSessionSavePath = @"session.dict";
     NSMutableDictionary * newSessionDict = [[NSMutableDictionary alloc] init];
     [newSessionDict setObject:_userId forKey:kSPSessionUserId];
     [newSessionDict setObject:_currentSessionId forKey:kSPSessionId];
-    [newSessionDict setObject:_previousSessionId forKey:kSPSessionPreviousId];
+    [newSessionDict setObject:(_previousSessionId != nil ? _previousSessionId : [NSNull null]) forKey:kSPSessionPreviousId];
     [newSessionDict setObject:[NSNumber numberWithInt:(int)_sessionIndex] forKey:kSPSessionIndex];
     [newSessionDict setObject:_sessionStorage forKey:kSPSessionStorage];
     _sessionDict = newSessionDict;
