@@ -70,10 +70,10 @@
 // Standard Dictionary
 
 - (void) setStandardDict {
-    [_standardDict addValueToPayload:[SPUtilities getPlatform]   forKey:kSPPlatform];
+//    [_standardDict addValueToPayload:[SPUtilities getPlatform]   forKey:kSPPlatform];
     [_standardDict addValueToPayload:[SPUtilities getResolution] forKey:kSPResolution];
     [_standardDict addValueToPayload:[SPUtilities getViewPort]   forKey:kSPViewPort];
-    [_standardDict addValueToPayload:[SPUtilities getLanguage]   forKey:kSPLanguage];
+//    [_standardDict addValueToPayload:[SPUtilities getLanguage]   forKey:kSPLanguage];
 }
 
 - (void) setUserId:(NSString *)uid {
@@ -100,7 +100,7 @@
 }
 
 - (void) setLanguage:(NSString *)lang {
-    [_standardDict addValueToPayload:lang forKey:kSPLanguage];
+//    [_standardDict addValueToPayload:lang forKey:kSPLanguage];
 }
 
 - (void) setIpAddress:(NSString *)ip {
@@ -123,7 +123,7 @@
 
 - (void) setPlatformDict {
     _platformDict = [[SPPayload alloc] init];
-    [_platformDict addValueToPayload:[SPUtilities getOSType]            forKey:kSPPlatformOsType];
+//    [_platformDict addValueToPayload:[SPUtilities getOSType]            forKey:kSPPlatformOsType];
     [_platformDict addValueToPayload:[SPUtilities getOSVersion]         forKey:kSPPlatformOsVersion];
     [_platformDict addValueToPayload:[SPUtilities getDeviceVendor]      forKey:kSPPlatformDeviceManu];
     [_platformDict addValueToPayload:[SPUtilities getDeviceModel]       forKey:kSPPlatformDeviceModel];

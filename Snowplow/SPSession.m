@@ -213,11 +213,11 @@ NSString * const kSessionSavePath = @"session.dict";
 
 - (void) updateSessionDict {
     NSMutableDictionary * newSessionDict = [[NSMutableDictionary alloc] init];
-    [newSessionDict setObject:_userId forKey:kSPSessionUserId];
+//    [newSessionDict setObject:_userId forKey:kSPSessionUserId];
     [newSessionDict setObject:_currentSessionId forKey:kSPSessionId];
-    [newSessionDict setObject:(_previousSessionId != nil ? _previousSessionId : [NSNull null]) forKey:kSPSessionPreviousId];
+//    [newSessionDict setObject:(_previousSessionId != nil ? _previousSessionId : [NSNull null]) forKey:kSPSessionPreviousId];
     [newSessionDict setObject:[NSNumber numberWithInt:(int)_sessionIndex] forKey:kSPSessionIndex];
-    [newSessionDict setObject:_sessionStorage forKey:kSPSessionStorage];
+//    [newSessionDict setObject:_sessionStorage forKey:kSPSessionStorage];
     _sessionDict = newSessionDict;
 }
 

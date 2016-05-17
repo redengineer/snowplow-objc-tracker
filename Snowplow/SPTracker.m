@@ -96,8 +96,11 @@
 }
 
 - (void) setTrackerData {
+//    _trackerData = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+//                    kSPVersion, kSPTrackerVersion,
+//                    _trackerNamespace != nil ? _trackerNamespace : [NSNull null], kSPNamespace,
+//                    _appId != nil ? _appId : [NSNull null], kSPAppId, nil];
     _trackerData = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                    kSPVersion, kSPTrackerVersion,
                     _trackerNamespace != nil ? _trackerNamespace : [NSNull null], kSPNamespace,
                     _appId != nil ? _appId : [NSNull null], kSPAppId, nil];
 }
@@ -264,7 +267,7 @@
     if (_subject != nil) {
         [pb addDictionaryToPayload:[[_subject getStandardDict] getAsDictionary]];
     } else {
-        [pb addValueToPayload:[SPUtilities getPlatform] forKey:kSPPlatform];
+//        [pb addValueToPayload:[SPUtilities getPlatform] forKey:kSPPlatform];
     }
     
     // Add the contexts

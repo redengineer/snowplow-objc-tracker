@@ -47,15 +47,15 @@ NSString * const kSPEndpointGet           = @"/api/collect";
 NSString * const kSPIglu                  = @"dd";
 NSString * const kSPSnowplowVendor        = @"com.xhs";
 NSString * const kSPSchemaTag             = @"json";
-NSString * const kSPPayloadDataSchema     = @"dd:com.xhs/payload_data/json/1-0-4";
-NSString * const kSPUserTimingsSchema     = @"dd:com.xhs/timing/json/1-0-0";
-NSString * const kSPScreenViewSchema      = @"dd:com.xhs/screen_view/json/1-0-0";
-NSString * const kSPUnstructSchema        = @"dd:com.xhs/unstruct_event/json/1-0-0";
-NSString * const kSPContextSchema         = @"dd:com.xhs/contexts/json/1-0-1";
-NSString * const kSPMobileContextSchema   = @"dd:com.xhs/mobile_context/json/1-0-1";
+NSString * const kSPPayloadDataSchema     = @"pd/1-0-4";
+NSString * const kSPUserTimingsSchema     = @"pft/1-0-0";
+NSString * const kSPScreenViewSchema      = @"scv/1-0-0";
+NSString * const kSPUnstructSchema        = @"ue/1-0-0";
+NSString * const kSPContextSchema         = @"ctx/1-0-1";
+NSString * const kSPMobileContextSchema   = @"mbc/1-0-1";
 NSString * const kSPDesktopContextSchema  = @"dd:com.xhs/desktop_context/json/1-0-0";
-NSString * const kSPSessionContextSchema  = @"dd:com.xhs/client_session/json/1-0-1";
-NSString * const kSPGeoContextSchema      = @"dd:com.xhs/geolocation_context/json/1-1-0";
+NSString * const kSPSessionContextSchema  = @"cls/1-0-1";
+NSString * const kSPGeoContextSchema      = @"glc/1-1-0";
 
 // --- Event Keys
 
