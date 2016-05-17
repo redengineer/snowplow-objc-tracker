@@ -47,7 +47,7 @@ NSString * const kSPEndpointGet           = @"/api/collect";
 NSString * const kSPIglu                  = @"dd";
 NSString * const kSPSnowplowVendor        = @"com.xhs";
 NSString * const kSPSchemaTag             = @"json";
-NSString * const kSPPayloadDataSchema     = @"pd/1-0-4";
+NSString * const kSPPayloadDataSchema     = @"pd/1-0-5";
 NSString * const kSPUserTimingsSchema     = @"pft/1-0-0";
 NSString * const kSPScreenViewSchema      = @"scv/1-0-0";
 NSString * const kSPUnstructSchema        = @"ue/1-0-0";
@@ -55,7 +55,7 @@ NSString * const kSPContextSchema         = @"ctx/1-0-1";
 NSString * const kSPMobileContextSchema   = @"mbc/1-0-1";
 NSString * const kSPDesktopContextSchema  = @"dd:com.xhs/desktop_context/json/1-0-0";
 NSString * const kSPSessionContextSchema  = @"cls/1-0-1";
-NSString * const kSPGeoContextSchema      = @"glc/1-1-0";
+NSString * const kSPGeoContextSchema      = @"glc/1-0-1";
 
 // --- Event Keys
 
