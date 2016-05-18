@@ -98,7 +98,7 @@ extern NSString * const kSPContext;
 extern NSString * const kSPContextEncoded;
 extern NSString * const kSPUnstructured;
 extern NSString * const kSPUnstructuredEncoded;
-extern NSString * const kSPSequnceId
+extern NSString * const kSPSequnceId;
 
 extern NSString * const kSPExp;
 
