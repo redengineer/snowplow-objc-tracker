@@ -83,6 +83,7 @@
 - (SPPayload *) addDefaultParamsToPayload:(SPPayload *)pb {
     [pb addValueToPayload:[NSString stringWithFormat:@"%@", [@(_timestamp) stringValue]] forKey:kSPTimestamp];
     [pb addValueToPayload:_eventId forKey:kSPEid];
+    [pb addValueToPayload:_sequnceId forKey:kSPSequnceId];
     return pb;
 }
 

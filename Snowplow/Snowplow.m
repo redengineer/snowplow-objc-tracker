@@ -81,7 +81,7 @@ NSString * const kSPContext               = @"co";
 NSString * const kSPContextEncoded        = @"cx";
 NSString * const kSPUnstructured          = @"ue_pr";
 NSString * const kSPUnstructuredEncoded   = @"ue_px";
-
+NSString * const kSPSequnceId             = @"seq_id";
 //XHS
 NSString * const kSPExp                   = @"exp";
 
