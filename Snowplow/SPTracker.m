@@ -223,6 +223,7 @@
         [builder setTimestamp:[event getTimestamp]];
         [builder setContexts:[event getContexts]];
         [builder setEventId:[event getEventId]];
+        [builder setSequnceId:[event getSequnceId]];
     }];
     [self trackUnstructuredEvent:unstruct];
 }
@@ -233,6 +234,7 @@
         [builder setTimestamp:[event getTimestamp]];
         [builder setContexts:[event getContexts]];
         [builder setEventId:[event getEventId]];
+        [builder setSequnceId:[event getSequnceId]];
     }];
     [self trackUnstructuredEvent:unstruct];
 }

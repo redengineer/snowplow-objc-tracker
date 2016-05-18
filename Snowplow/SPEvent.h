@@ -31,6 +31,7 @@
 - (void) setTimestamp:(NSInteger)timestamp;
 - (void) setContexts:(NSMutableArray *)contexts;
 - (void) setEventId:(NSString *)eventId;
+- (void) setSequnceId:(NSString *)squnceId;
 @end
 
 @protocol SPPageViewBuilder <SPEventBuilder>
@@ -93,10 +94,12 @@
 @property (nonatomic, readwrite) NSInteger timestamp;
 @property (nonatomic, readwrite, retain) NSMutableArray* contexts;
 @property (nonatomic, readwrite, retain) NSString * eventId;
+@property (nonatomic, readwrite, retain) NSString * sequnceId;
 
 - (NSMutableArray *) getContexts;
 - (NSInteger) getTimestamp;
 - (NSString *) getEventId;
+- (NSString *) getSequnceId;
 - (SPPayload *) addDefaultParamsToPayload:(SPPayload *)pb;
 @end
 

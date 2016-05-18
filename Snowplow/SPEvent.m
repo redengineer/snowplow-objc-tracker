@@ -58,6 +58,10 @@
     _eventId = eventId;
 }
 
+- (void)setSequnceId:(NSString *)sequnceId
+{
+    _sequnceId = sequnceId;
+}
 // --- Public Methods
 
 - (NSMutableArray *) getContexts {
@@ -70,6 +74,10 @@
 
 - (NSString *) getEventId {
     return _eventId;
+}
+
+- (NSString *) getSequnceId {
+    return _sequnceId;
 }
 
 - (SPPayload *) addDefaultParamsToPayload:(SPPayload *)pb {
