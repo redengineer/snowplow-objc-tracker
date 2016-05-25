@@ -30,6 +30,7 @@
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import "Reachability.h"
+#import <sys/utsname.h>
 
 #elif SNOWPLOW_TARGET_OSX
 
@@ -182,6 +183,15 @@
     free(model);
     return hwString;
 #endif
+}
+
++ (NSString *)getDeviceName
+{
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *result = [NSString stringWithCString:systemInfo.machine
+                                          encoding:NSUTF8StringEncoding];
+    return result;
 }
 
 + (NSString *) getOSVersion {

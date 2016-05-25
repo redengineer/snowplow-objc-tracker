@@ -121,6 +121,7 @@ extern NSString * const kSPPlatformOsType;
 extern NSString * const kSPPlatformOsVersion;
 extern NSString * const kSPPlatformDeviceManu;
 extern NSString * const kSPPlatformDeviceModel;
+extern NSString * const kSPPlatformDeviceType;
 
 // --- Mobile Context
 

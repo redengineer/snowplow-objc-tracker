@@ -104,7 +104,7 @@ NSString * const kSPPlatformOsType        = @"osType";
 NSString * const kSPPlatformOsVersion     = @"osVersion";
 NSString * const kSPPlatformDeviceManu    = @"deviceManufacturer";
 NSString * const kSPPlatformDeviceModel   = @"deviceModel";
-
+NSString * const kSPPlatformDeviceType   = @"deviceType";
 // --- Mobile Context
 
 NSString * const kSPMobileCarrier         = @"carrier";

@@ -120,6 +120,9 @@
  */
 + (NSString *) getDeviceModel;
 
+
++ (NSString *) getDeviceName;
+
 /**
  *  This is to detect what the version of mobile OS of the current device.
  *  @return The current device's OS version type as a string.
